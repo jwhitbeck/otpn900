@@ -1,0 +1,13 @@
+Source: otp
+Section: unknown
+Priority: extra
+Maintainer: Sean Whitbeck <sean@neush.net>
+Build-Depends: debhelper (>= 5), autotools-dev, libhildon1-dev (>= 2.2), libosso-dev (>= 2.32)
+Standards-Version: 3.7.2
+
+Package: otp
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: OTP Generator for N900
+ OTP Generator for Maemo on the Nokia N900. Supports OATH tokens 
+ (HOTP,TOTP) as well as the Mobile-OTP algorithm.

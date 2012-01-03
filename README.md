@@ -42,6 +42,18 @@ it to your N900 phone, and, run (as root):
 
     # dpkg -i otp_0.1-1_armel.deb
 
+
+Google 2-step Authentication Support
+------------------------------------
+
+Google uses Base32 keys for their 2-step authentication. The OTPN900
+maemo program cannot use these directly, but will work fine if the
+Base32 key is first converted to hexadecimal before being entered into
+OTPN900. For a detailed tutorial, refer to the discussion
+[here](http://github.com/neush/otpn900/issues/1). Many thanks to Yao
+Wei for his help with this.
+
+
 See also
 --------
 

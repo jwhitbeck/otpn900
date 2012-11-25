@@ -37,7 +37,7 @@ Alternatively, you may download the binary package
 (otp\_0.1-1\_armel.deb) from either the [Maemo
 repository](http://repository.maemo.org/extras-devel/pool/fremantle/free/o/otp/otp_0.1-1_armel.deb)
 or from
-[neush.net](http://neush.net/static/otpn900/otp_0.1-1_armel.deb). Copy
+[github.com](https://github.com/downloads/neush/otpn900/otp_0.1-1_armel.deb). Copy
 it to your N900 phone, and, run (as root):
 
     # dpkg -i otp_0.1-1_armel.deb
@@ -63,8 +63,8 @@ See also
 Screenshots
 -----------
 
-![Profile selection](http://neush.net/static/otpn900/screen1.jpg "Profile selection")
-![HOTP](http://neush.net/static/otpn900/screen2.jpg "HOTP")
-![HOTP Config](http://neush.net/static/otpn900/screen3.jpg "HOTP configuration")
-![Pin pad](http://neush.net/static/otpn900/screen4.jpg "Pin code entry for MOTP")
-![MOTP](http://neush.net/static/otpn900/screen5.jpg "MOTP")
+![Profile selection](https://github.com/downloads/neush/otpn900/screen1.jpg "Profile selection")
+![HOTP](https://github.com/downloads/neush/otpn900/screen2.jpg "HOTP")
+![HOTP Config](https://github.com/downloads/neush/otpn900/screen3.jpg "HOTP configuration")
+![Pin pad](https://github.com/downloads/neush/otpn900/screen4.jpg "Pin code entry for MOTP")
+![MOTP](https://github.com/downloads/neush/otpn900/screen5.jpg "MOTP")

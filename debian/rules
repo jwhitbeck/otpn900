@@ -24,8 +24,9 @@ else
 	CFLAGS += -O2
 endif
 
-config.status: configure
+config.status:
 	dh_testdir
+	dh_autoreconf
 	# Add here commands to configure the package.
 	./configure --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TYPE) --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info CFLAGS="$(CFLAGS)" LDFLAGS="-Wl,-z,defs"
 
@@ -56,6 +57,7 @@ ifneq "$(wildcard /usr/share/misc/config.guess)" ""
 endif
 
 
+	dh_autoreconf_clean
 	dh_clean 
 
 install: build
@@ -77,7 +79,7 @@ binary-arch: build install
 	dh_testdir
 	dh_testroot
 	dh_installchangelogs 
-	dh_installdocs
+#	dh_installdocs
 	dh_installexamples
 #	dh_install
 #	dh_installmenu

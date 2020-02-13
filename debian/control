@@ -1,11 +1,11 @@
-Source: otp
+Source: maeotp
 Section: unknown
 Priority: extra
 Maintainer: Sean Whitbeck <sean@neush.net>
 Build-Depends: debhelper (>= 9), autotools-dev, libhildon1-dev (>= 2.2), libosso-dev (>= 2.32)
 Standards-Version: 3.7.2
 
-Package: otp
+Package: maeotp
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: OTP Generator for N900

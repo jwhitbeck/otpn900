@@ -1,3 +1,10 @@
+maeotp (0.2.1-0) unstable; urgency=medium
+
+  * Remove leftover Makefile.in files.
+  * Rename binary to maeotp.
+
+ -- Ivan J. <parazyd@dyne.org>  Thu, 19 Mar 2020 17:12:53 +0100
+
 maeotp (0.2-1) unstable; urgency=low
 
   * Rename application to avoid conflict with other packages

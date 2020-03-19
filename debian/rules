@@ -38,7 +38,7 @@ build-stamp:  config.status
 
 	# Add here commands to compile the package.
 	$(MAKE)
-	#docbook-to-man debian/otp.sgml > otp.1
+	#docbook-to-man debian/maeotp.sgml > maeotp.1
 
 	touch $@
 

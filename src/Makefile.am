@@ -1,11 +1,11 @@
 # main program
-bin_PROGRAMS = otp
+bin_PROGRAMS = maeotp
 
-otp_CPPFLAGS = $(HILDON_CFLAGS) $(LIBOSSO_CFLAGS) -Wall
-otp_LDADD = $(HILDON_LIBS) $(LIBOSSO_LIBS)
-otp_SOURCES = main.c tokenselector.c tokenview.c \
+maeotp_CPPFLAGS = $(HILDON_CFLAGS) $(LIBOSSO_CFLAGS) -Wall
+maeotp_LDADD = $(HILDON_LIBS) $(LIBOSSO_LIBS)
+maeotp_SOURCES = main.c tokenselector.c tokenview.c \
 	pindialog.c ctdialog.c etdialog.c \
-	util.c tokendb.c otp.c strconv.c 
+	util.c tokendb.c otp.c strconv.c
 
 noinst_HEADERS = tokenselector.h tokenview.h \
 	pindialog.h ctdialog.h etdialog.h \

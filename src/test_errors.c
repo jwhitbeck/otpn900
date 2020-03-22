@@ -33,7 +33,7 @@
 
 #define ASSERT_NO_ERROR				\
   if ( err ) {					\
-    g_error ( err->message );			\
+    g_error ( "%s", err->message );			\
   }						
   
 

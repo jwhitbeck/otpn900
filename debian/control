@@ -1,9 +1,9 @@
 Source: maeotp
-Section: unknown
+Section: user/utilities
 Priority: extra
-Maintainer: Sean Whitbeck <sean@neush.net>
-Build-Depends: debhelper (>= 9), autotools-dev, libhildon1-dev (>= 2.2), libosso-dev (>= 2.32)
-Standards-Version: 3.7.2
+Maintainer: Sicelo A. Mhlongo <absicsz@gmail.com>
+Build-Depends: debhelper (>= 10), autotools-dev, libhildon1-dev (>= 2.2), libosso-dev (>= 2.32)
+Standards-Version: 4.2.0
 
 Package: maeotp
 Architecture: any

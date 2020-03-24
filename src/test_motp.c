@@ -74,6 +74,7 @@ main ()
     token->pin = g_strdup( pins[i] );
     otp = token_motp( token );
     g_free ( (gpointer)token->pin );
+    token->pin = NULL;
     ok = ( g_strcmp0 (otp, otps[i] ) == 0 );
     if ( !ok )
       g_error ( "Error in test %d: Expected '%s', got '%s'\n", i, otps[i]);

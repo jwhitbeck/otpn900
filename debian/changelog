@@ -1,3 +1,9 @@
+maeotp (0.2.4-0) ustable; urgency=low
+
+  * Fix testsuite
+
+ -- Sicelo A. Mhlongo <absicsz@gmail.com>  Tue, 24 Mar 2020 23:25:47 +02:00
+
 maeotp (0.2.3-0) unstable; urgency=low
 
   * Update packaging for debhelper 10; fix errors

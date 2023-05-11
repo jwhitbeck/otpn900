@@ -59,8 +59,8 @@ typedef enum {
 } KeyType;
 
 
-const gchar* algorithm_labels[N_OTP_ALGORITHMS];
-const gchar* counter_type_labels[N_OTP_COUNTER_TYPES];
+extern const gchar* algorithm_labels[N_OTP_ALGORITHMS];
+extern const gchar* counter_type_labels[N_OTP_COUNTER_TYPES];
 
 
 /* OTP Tokens */

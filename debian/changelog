@@ -1,8 +1,15 @@
-maeotp (0.2.4-0) ustable; urgency=low
+maeotp (0.2.5-0) unstable; urgency=low
+
+  * Fix compilation error by using extern keyword
+  * Fix incorrectly formatted changelog trailer line
+
+ -- Sicelo A. Mhlongo <absicsz@gmail.com>  Thu, 11 May 2023 23:58:21 +0200
+
+maeotp (0.2.4-0) unstable; urgency=low
 
   * Fix testsuite
 
- -- Sicelo A. Mhlongo <absicsz@gmail.com>  Tue, 24 Mar 2020 23:25:47 +02:00
+ -- Sicelo A. Mhlongo <absicsz@gmail.com>  Tue, 24 Mar 2020 23:25:47 +0200
 
 maeotp (0.2.3-0) unstable; urgency=low
 
@@ -40,7 +47,5 @@ otp (0.2-0) unstable; urgency=low
 otp (0.1-1) unstable; urgency=low
 
   * Initial release
-  * 
 
  -- Sean Whitbeck <sean@neush.net>  Fri, 28 Jan 2011 13:42:52 +0100
-

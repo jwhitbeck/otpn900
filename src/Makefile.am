@@ -1,8 +1,8 @@
 # main program
 bin_PROGRAMS = maeotp
 
-maeotp_CPPFLAGS = $(HILDON_CFLAGS) $(LIBOSSO_CFLAGS) -Wall
-maeotp_LDADD = $(HILDON_LIBS) $(LIBOSSO_LIBS)
+maeotp_CPPFLAGS = $(HILDON_CFLAGS) $(LIBOSSO_CFLAGS) $(BASEENCODE_CFLAGS) -Wall
+maeotp_LDADD = $(HILDON_LIBS) $(LIBOSSO_LIBS) $(BASEENCODE_LIBS)
 maeotp_SOURCES = main.c tokenselector.c tokenview.c \
 	pindialog.c ctdialog.c etdialog.c \
 	util.c tokendb.c otp.c strconv.c

@@ -19,6 +19,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.        *
  ********************************************************************************/
 
+#include <stdlib.h>
+#include <stdio.h>
+#include <baseencode.h>
 
 #include <time.h>
 #include <string.h>
@@ -296,6 +299,14 @@ token_epoch ( Token *token )
   return 0;
 }
 
+static char* bin2hex(char* bin) {
+  int len = strlen(bin);
+  char output[(len * 2) + 1];
+  for (int i = 0; i < len; i++) {
+    sprintf(&output[i*2], "%02X", bin[i]);
+  }
+  return strdup(output);
+}
 
 void 
 token_set_key ( Token *token, const gchar *str, GError **err )
@@ -305,13 +316,33 @@ token_set_key ( Token *token, const gchar *str, GError **err )
   KeyType key_t;
   guint key_l;
 
+  baseencode_error_t berr;
+  char* base32_decoded = NULL;
+
+
   key_l = 0;
   key = NULL;
   key_t = 0;
   
   switch ( token->algorithm )
     {
-    case HOTP: /* HOTP passwords can be binary or ascii */
+    case HOTP: /* HOTP passwords can be base32, binary or ascii */
+
+      /* Check if it is base32 encoded, if it is, use the hex path */
+      base32_decoded = base32_decode(str, strlen(str), &berr);
+      if (berr == SUCCESS) {
+        char* hex = bin2hex(base32_decoded);
+        free(base32_decoded);
+
+        lerr = NULL;
+        key_t = HEX;
+        key = hex_strtokey ( hex, &key_l, &lerr );
+        free(hex);
+
+        if ( !lerr ){ /* otherwise, try path below */
+          break;
+        }
+      }
       /* first try to interpret as a hex string */
       lerr = NULL;
       key_t = HEX;
